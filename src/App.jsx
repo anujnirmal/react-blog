@@ -1,11 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useDispatch } from 'react-redux';
+import authService from './appwrite/auth';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  console.log(import.meta.env.VITE_APPWRITE_URL)
+  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+
+
   return (
     <>
      <h1>A blog with appwrite</h1>
